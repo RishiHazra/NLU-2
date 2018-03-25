@@ -50,7 +50,6 @@ start_time = time.time()
 import nltk
 
 classes = gutenberg.fileids()
-classes = classes[1:2]
 
 train_data = []
 test_data = []
@@ -128,7 +127,7 @@ parser.add_argument('--lstm_size', type=int, default=128, help='size of LSTM hid
 parser.add_argument('--num_layers', type=int, default=2, help='number of layers in the RNN')
 parser.add_argument('--batch_size', type=int, default=20, help='Batch size')
 parser.add_argument('--seq_length', type=int, default=20, help='LSTM sequence length')
-parser.add_argument('--num_epochs', type=int, default=10, help='number of epochs')
+parser.add_argument('--num_epochs', type=int, default=30, help='number of epochs')
 parser.add_argument('--eta', type=float, default=0.002, help='learning rate')
 parser.add_argument('--decay', type=float, default=0.97, help='decay rate')
 parser.add_argument('--save_every', type=int, default=1000, help='save frequency')

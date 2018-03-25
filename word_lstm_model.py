@@ -10,7 +10,6 @@ import json
 from tensorflow.contrib import rnn, legacy_seq2seq
 import numpy as np
 tf.reset_default_graph()
-import matplotlib.pyplot as plt
 
 
 class WordLSTM:

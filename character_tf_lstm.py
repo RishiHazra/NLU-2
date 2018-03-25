@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Created on Wed Mar 21 09:05:31 2018
 @author: Rishi
@@ -16,8 +15,6 @@ from char_lstm_model import CharLSTM
 batch_size=50
 seq_length=50
 
-'''Preprocessed_model'''
-
 def process_text(raw_text):
     import re
     raw_text=re.sub('  ',' ',raw_text)
@@ -30,7 +27,7 @@ def split_data(text):
     train=[]
     test=[]
     text=nltk.tokenize.sent_tokenize(text)
-    split=math.floor(80*len(text)/100)
+    split=int(math.floor(80*len(text)/100))
     train=text[:split]
     test=text[split:]
     return train,test
@@ -40,7 +37,6 @@ print('Pre-processing...')
 start_time = time.time()
 import nltk
 classes=gutenberg.fileids()
-classes=classes[1:2]
 
 train_data=[]
 test_data=[]

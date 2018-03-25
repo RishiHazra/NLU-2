@@ -15,20 +15,20 @@ import numpy as np
 
 # Starting from sequential data, batchify arranges the dataset into columns.
 # For instance, with the alphabet as the sequence and batch size 4, we'd get
-# ┌ a g m s ┐
-# │ b h n t │
-# │ c i o u │
-# │ d j p v │
-# │ e k q w │
-# └ f l r x ┘.
+#  a g m s 
+#  b h n t 
+#  c i o u 
+#  d j p v 
+#  e k q w 
+#  f l r x .
 # These columns are treated as independent by the model, which means that the
 # batch processing.
 
 
 # get_batch subdivides the source data into chunks of length args.bptt.
 
-# ┌ a g m s ┐ ┌ b h n t ┐
-# └ b h n t ┘ └ c i o u ┘
+#  a g m s   b h n t 
+#  b h n t   c i o u 
 
 # the subdivison of data is not
 # done along the batch dimension (i.e. dimension 1).The chunks are along 
@@ -38,7 +38,7 @@ import numpy as np
 
 class CharLSTM:
     def __init__(self, args, training=True):
-        super().__init__()
+        # super().__init__()
         self.args=args
         if not training:
             args.batch_size=1

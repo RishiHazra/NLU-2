@@ -19,7 +19,7 @@ def process_text(raw_text):
 
 parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 parser.add_argument('--save_dir', type=str, default='./saveChar', help='Directory to save model checkpoints')
-parser.add_argument('--start', type=str, default='a', help='Start of the generation')
+parser.add_argument('--start', type=str, default='a ', help='Start of the generation')
 parser.add_argument('--predict', type=int, default=100, help='No of predictions')
 args = parser.parse_args()
 
