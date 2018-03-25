@@ -21,8 +21,9 @@ seq_length = 20
 '''Preprocessed_model'''
 
 def process_text(raw_text):
-    table = str.maketrans('', '', '→îé*&`%_@~è>')
-    raw_text = raw_text.translate(table)
+    import re
+    raw_text=re.sub('  ',' ',raw_text)
+    raw_text=re.sub ('[^A-Za-z0-9?&\.!\'\; \-\,]', '', raw_text)
     return raw_text
 
 
