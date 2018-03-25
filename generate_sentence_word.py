@@ -16,8 +16,9 @@ from word_lstm_model import WordLSTM
 
 
 def process_text(raw_text):
-    table = str.maketrans('', '', '→îé*&`%_@~è>')
-    raw_text = raw_text.translate(table)
+    import re
+    raw_text=re.sub('  ',' ',raw_text)
+    raw_text=re.sub ('[^A-Za-z0-9?&\.!\'\; \-\,]', '', raw_text)
     raw_text
     words=nltk.word_tokenize(raw_text)
     return words
