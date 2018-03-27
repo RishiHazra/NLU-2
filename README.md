@@ -25,7 +25,8 @@ The code files are as follows:
 (C) word_lstm_model.py       : defines token level model created using tensorflow
 
 ```
-Give the example
+my praetors practice.sir simply practise themonstrous advantage.you adownright aery-light me.susan me.sir
+that spanned affected thoughtfulness obominable agony serapis
 ```
 
 ### Character Level LSTM
