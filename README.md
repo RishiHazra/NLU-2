@@ -1,88 +1,48 @@
-# Project Title
+# NLU Assignment 2 
 
-One Paragraph of project description goes here
+Divide the Gutenberg corpus into train, dev, and test. Let the training split be D2-Train. Implement and build the best LM in the following setting and evaluate.
 
-## Getting Started
+## Task 1
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Build the best token level LSTM-based language model for the setting above.
 
-### Prerequisites
 
-What things you need to install the software and how to install them
+## Task 2
+
+Build the best character level LSTM-based language model for the setting above.
 
 ```
 Give examples
 ```
 
-### Installing
+### Token Level LSTM
+The code files are as follows:
 
-A step by step series of examples that tell you have to get a development env running
+(A) generate_sentece_word.py : used to generate sentences for Token level model
 
-Say what the step will be
+(B) word_tf_lstm.py          : preprocessing for the token level model
+
+(C) word_lstm_model.py       : defines token level model created using tensorflow
 
 ```
 Give the example
 ```
 
-And repeat
+### Character Level LSTM
+The code files are as follows:
+
+(A) generate_sentece_char.py : used to generate sentences for character level model
+
+(B) char_tf_lstm.py          : preprocessing for the character level model
+
+(C) char_lstm_model.py       : defines character level model created using tensorflow
 
 ```
-until finished
+the all mrs musgroves be the sun, i shall be made no signs,i may see what best does
+
+then he always said that i loved him to see by the first man of proper
+
+the fortyyears old god of israel lived into a zidian11 now the princes of the rivers shall be so that one of all the words of my people. @111 and the great continually down by the house of the lord unto the assessions of the border with the waters may not see him and they shall be as a burnt offerings they shall they be set on the south of zeban, and the children of israel 1112 and the lord said, i may do in a strangerand he made him in the land of judah, and jerusalem with me with the son of shepherds, and god in my words.
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
-
+The model used for generating sentences is the character level LSTM model
