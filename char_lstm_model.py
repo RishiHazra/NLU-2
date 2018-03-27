@@ -117,8 +117,18 @@ class CharLSTM:
                     val = int(np.searchsorted(np.cumsum(prob[0]), np.random.rand(1)))
                 else:
                     val = int(np.argmax(prob[0]))
+                    c = value_to_char[val]
+                    count=0
+                    while c=='@' and count <=10:                        
+                        x = np.reshape(char_to_value[c], [1, 1])
+                        feed = {self.input_data: x, self.initial_state: state}
+                        prob, state = sess.run([self.probs, self.final_state], feed)
+                        val = int(np.argmax(prob[0]))
+                        c = value_to_char[val]
+                        count+=1
+                              
                 c = value_to_char[val]
-                sentence += c
+                sentence += c                
             return sentence
         
         
