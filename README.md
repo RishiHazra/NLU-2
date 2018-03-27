@@ -11,10 +11,6 @@ Build the best token level LSTM-based language model for the setting above.
 
 Build the best character level LSTM-based language model for the setting above.
 
-```
-Give examples
-```
-
 ### Token Level LSTM
 The code files are as follows:
 
@@ -47,3 +43,5 @@ the fortyyears old god of israel lived into a zidian11 now the princes of the ri
 ```
 
 The model used for generating sentences is the character level LSTM model
+
+#### The report file is NLU_Assignment_2.pdf
